@@ -5,7 +5,7 @@ En utilisant map, cette fonction doit renvoyer un tableau avec,
 pour chaque chaîne CHAINE de longueur N en entrée, la chaîne "CHAINE contains N characters"
 en sortie.
 
-Exemple d'entrée:
+
   [
     'Chicken',
     'Bacon',
@@ -21,9 +21,20 @@ En sortie: [
 
  */
 
-function getStringsLength(strings) {
-}
+ let strings =  [
+  'Chicken',
+  'Bacon',
+  'Tofu',
+  'Mayonnaise'
+];
 
+
+function getStringsLength(){
+  return  strings.map ( strings => `${strings} contains ${strings.length} characters`);
+};
+//const mapStrings = strings.map(getStringsLength);+ " contains " + x.length + " characters";
+
+console.log(getStringsLength(strings))
 // Si besoin, tu peux toujours visualiser le résultat avec console.log,
 // mais alors, il faut alors lancer l'exercice avec node map/ex1
 // console.log(getStringsLength(['Cat', 'Lion', 'Tiger', 'Jaguar', 'Leopard']));

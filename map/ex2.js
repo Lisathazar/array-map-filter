@@ -42,8 +42,48 @@ En sortie: [
 
  */
 
+
+let vegetarianFood= [
+  {
+    food: 'Bacon',
+    isVegetarian: false
+  },
+  {
+    food: 'Sausage',
+    isVegetarian: false
+  },
+  {
+    food: 'Tofu',
+    isVegetarian: true
+  },
+  {
+    food: 'Chick Pea',
+    isVegetarian: true
+  }
+]
 function getFoodCategories(foods) {
+  const food = foods.map(function(elements) {
+    if (elements.isVegetarian === false) {
+      return elements.food + " is not suitable for vegetarians"
+    } else {
+      return elements.food + " is suitable for vegetarians"
+    }
+  }) 
+  return food;
 }
+
+console.log(getFoodCategories(vegetarianFood))
+/*
+
+
+}*/
+
+/*function getFoodCategories(vegetarianFood) {
+  if (vegetarianFood.isVegetarian === true) {console.log(" is suitable for vegetarian")
+  }else{
+    console.log(" is not suitable for vegetarian")
+  };
+};*/
 
 
 
